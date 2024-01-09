@@ -39,7 +39,7 @@ class FrameProcessorRuntimeManager(context: ReactApplicationContext, frameProces
       val holder = context.catalystInstance.jsCallInvokerHolder as CallInvokerHolderImpl
       mScheduler = VisionCameraScheduler(frameProcessorThread)
       mContext = WeakReference(context)
-      mHybridData = initHybrid(context.javaScriptContextHolder.get(), holder, mScheduler!!)
+      mHybridData = initHybrid(context.javaScriptContextHolder!!.get(), holder, mScheduler!!)
       initializeRuntime()
 
       Log.i(TAG, "Installing Frame Processor Plugins...")
